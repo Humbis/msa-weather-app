@@ -1,0 +1,20 @@
+{
+  "name": "msaweatherapp",
+  "version": "1.0.0",
+  "description": "msa module 2 weather app",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://Humbis@msa2016module2weatherapp.scm.azurewebsites.net:443/MSA2016Module2WeatherApp.git"
+  },
+  "author": "Alex Li (Kaimin)",
+  "license": "ISC"
+}
