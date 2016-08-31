@@ -59,6 +59,14 @@ $(document).ready(function() {
     { 
         getWeather($(this).find("a").text());
     });
+
+    $("#shareBtn").click(function () {
+        FB.ui({
+            method: 'share',
+            display: 'popup',
+            href: 'https://developers.facebook.com/docs/',
+        }, function(response){});
+    })
 });
 function getWeather(cityName:string) {
     $.get("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=ea030e80b21e4006ed84c9781fa9c3a4",

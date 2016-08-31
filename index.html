@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '1003675626418953',
+            xfbml      : true,
+            version    : 'v2.7'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>  
     <div id="mainContainer">
         <h1>Weather Searcher Test github</h1>
         <p id="weatherRaw">Placeholder description goes here</p>
@@ -41,6 +58,7 @@
         <input id="cities" style="width : 100%">
         <button id="searchbtn" style="width : 40%">Submit</button>
     </div>
+    <div id="shareBtn" class="btn btn-success clearfix">Share</div>
   </body>
   <script src="./ts/dropit.js"></script>
   <script src="./ts/weatherAPI.js"></script>
