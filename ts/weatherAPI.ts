@@ -64,7 +64,7 @@ $(document).ready(function() {
         FB.ui({
             method: 'share',
             display: 'popup',
-            href: 'https://developers.facebook.com/docs/',
+            href: 'http://msa2016module2weatherapp.azurewebsites.net/',
         }, function(response){});
     })
 });
