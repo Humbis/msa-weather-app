@@ -5,3 +5,10 @@
     font-weight: bold;
     color: green;
 }
+
+#searchbar{
+    width : 40%;
+    text-align: center;
+    margin: 20px;
+    margin-left: 30%;
+}

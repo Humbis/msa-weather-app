@@ -22,13 +22,7 @@ declare var $;
 
 $('#searchbtn').click(function () {
     var cityName: string = $('#cities').val();
-    $.get("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=ea030e80b21e4006ed84c9781fa9c3a4",
-        function (data) {
-            console.log(data);
-            $("#weatherRaw").html(data.name + " " 
-                + Math.round((data.main.temp - 273.15) * 10) / 10);
-        }
-    )
+    getWeather(cityName);
 })
 
 $(document).ready(function() {
@@ -60,4 +54,18 @@ $(document).ready(function() {
     $( "#cities" ).autocomplete({
       source: availableTags
     });
+
+    $('ul.menuItems li').click(function(e) 
+    { 
+        getWeather($(this).find("a").text());
+    });
 });
+function getWeather(cityName:string) {
+    $.get("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=ea030e80b21e4006ed84c9781fa9c3a4",
+        function (data) {
+            console.log(data);
+            $("#weatherRaw").html(data.name + " " 
+                + Math.round((data.main.temp - 273.15) * 10) / 10);
+        }
+    )
+}
