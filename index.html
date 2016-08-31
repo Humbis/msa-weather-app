@@ -10,7 +10,7 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body background="rain_drops.jpg">
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -29,39 +29,40 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>  
     <div id="mainContainer">
-        <h1>Weather Searcher Test github</h1>
-        <p id="weatherRaw">Placeholder description goes here</p>
+        <h1 style="font-weight:bold;font-size:42pt;">Weather Searcher</h1>
+        <p id="weatherRaw">Please select a city or search for it in the search bar</p>
+    
+        <ul class="menu" id="dropmenu">
+            <li>
+                <a href="#" class="btn btn-primary" id="dropbtn">Local Cities</a>
+                <ul class="menuItems">
+                    <li><a href="#">Auckland</a></li>
+                    <li><a href="#">Wellington</a></li>
+                    <li><a href="#">Hamilton</a></li>
+                    <li><a href="#">Nelson</a></li>
+                    <li><a href="#">Dunedin</a></li>
+                    <li><a href="#">Gisborne</a></li>
+                    <li><a href="#">Taupo</a></li>
+                    <li><a href="#">Rotorua</a></li>
+                    <li><a href="#">Tauranga</a></li>
+                    <li><a href="#">Whangarei</a></li>
+                    <li><a href="#">Invercargill</a></li>
+                    <li><a href="#">Napier</a></li>
+                    <li><a href="#">Queenstown</a></li>
+                    <li><a href="#">Palmerston North</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ui-widget" id="searchbar">
+            <label for="cities">Enter a city: </label>
+            <input id="cities" style="width : 100%;color: black;">
+            <button id="searchbtn" type="button" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="fb-share-button" 
+            data-href="http://msa2016module2weatherapp.azurewebsites.net/" 
+            data-layout="button_count">
+        </div>
     </div>
-    <ul class="menu">
-        <li>
-            <a href="#" class="ui-button">Local Cities</a>
-            <ul class="menuItems">
-                <li><a href="#">Auckland</a></li>
-                <li><a href="#">Wellington</a></li>
-                <li><a href="#">Hamilton</a></li>
-                <li><a href="#">Nelson</a></li>
-                <li><a href="#">Dunedin</a></li>
-                <li><a href="#">Gisborne</a></li>
-                <li><a href="#">Taupo</a></li>
-                <li><a href="#">Rotorua</a></li>
-                <li><a href="#">Tauranga</a></li>
-                <li><a href="#">Whangarei</a></li>
-                <li><a href="#">Invercargill</a></li>
-                <li><a href="#">Napier</a></li>
-                <li><a href="#">Queenstown</a></li>
-                <li><a href="#">Palmerston North</a></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="ui-widget" id="searchbar">
-        <label for="cities">Enter a city: </label>
-        <input id="cities" style="width : 100%">
-        <button id="searchbtn" style="width : 40%">Submit</button>
-    </div>
-    <div class="fb-share-button" 
-		data-href="http://msa2016module2weatherapp.azurewebsites.net/" 
-		data-layout="button_count">
-	</div>
   </body>
   <script src="./ts/dropit.js"></script>
   <script src="./ts/weatherAPI.js"></script>

@@ -1,9 +1,13 @@
 #mainContainer{
     width:100%;
+    margin-top: 10%;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: green;
+    font-family: Rockwell, sans-serif;
+    color: white;
+}
+
+body{
+   background-size:cover;
 }
 
 #searchbar{
@@ -11,4 +15,31 @@
     text-align: center;
     margin: 20px;
     margin-left: 30%;
+}
+
+#dropmenu{
+    width : 40%;
+    text-align: center;
+    margin: 20px;
+    margin-left: 30%;
+}
+
+#dropbtn{
+    width: 100%;
+    text-align: center;
+}
+
+.menuItems{
+    width: 100%;
+    text-align: center;
+}
+
+#weatherRaw{
+    font-size: 24pt;
+    font-weight: normal;
+}
+
+#searchbtn{
+    font-family: Rockwell, sans-serif;
+    width : 40%;
 }

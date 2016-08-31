@@ -54,7 +54,9 @@ function getWeather(cityName) {
     $.get("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=ea030e80b21e4006ed84c9781fa9c3a4", function (data) {
         console.log(data);
         $("#weatherRaw").html(data.name + " "
-            + Math.round((data.main.temp - 273.15) * 10) / 10);
+            + Math.round((data.main.temp - 273.15) * 10) / 10
+            + "\xB0C "
+            + data.weather[0].description);
     });
 }
 //# sourceMappingURL=weatherAPI.js.map

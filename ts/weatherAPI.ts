@@ -73,7 +73,9 @@ function getWeather(cityName:string) {
         function (data) {
             console.log(data);
             $("#weatherRaw").html(data.name + " " 
-                + Math.round((data.main.temp - 273.15) * 10) / 10);
+                + Math.round((data.main.temp - 273.15) * 10) / 10
+                + "\xB0C " 
+                + data.weather[0].description);
         }
     )
 }
