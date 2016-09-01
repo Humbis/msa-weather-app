@@ -1,22 +1,3 @@
-
-// class weatherData{
-//     name: string;
-//     temp: number;
-//     time: string;
-//     weatherCond: string;
-//     clouds: number;
-//     wind: number;
-//     rain: number;
-
-//     constructor(city, temp, time, weatherCond, clouds, wind){
-//         this.name = name;
-//         this.temp = temp;
-//         this.time = time;
-//         this.weatherCond = weatherCond;
-//         this.clouds = clouds;
-//         this.wind = wind;
-//     }
-// }
 declare var $;
 
 
@@ -26,7 +7,9 @@ $('#searchbtn').click(function () {
 })
 
 $(document).ready(function() {
+    //initialise the dropit drop down menu plugin
     $('.menu').dropit();
+    //initialise the autocomplete feature of the jquery-ui plugin
     var availableTags = [
       "Auckland",
       "Wellington",
@@ -59,15 +42,9 @@ $(document).ready(function() {
     { 
         getWeather($(this).find("a").text());
     });
-
-    // $("#shareBtn").click(function () {
-    //     FB.ui({
-    //         method: 'share',
-    //         display: 'popup',
-    //         href: 'http://msa2016module2weatherapp.azurewebsites.net/',
-    //     }, function(response){});
-    // })
 });
+
+//Starts an API call to OpenWeather and display relevant data
 function getWeather(cityName:string) {
     $.get("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=ea030e80b21e4006ed84c9781fa9c3a4",
         function (data) {
